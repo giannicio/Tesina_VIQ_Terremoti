@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mappa</title>
+    <script src="https://oop.polito.it/js/plotly-latest.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="plot.js"></script>
+</head>
+<body>
+
+<h1>ItalEarthQuakes</h1>
+
+<div class="grid-container">
+
+    <div class="menu1"><p><a class="mm" href="index.html">Home Page</a></p></div>
+    <div class="menu2"><p><a class="mm" href="mappa.html">Mappa degli epicentri</a></p></div>
+    <div class="menu3"><p><a class="mm" href="numerosita.html">Numerosit&agrave per anno</a></p></div>
+    <div class="menu4"><p><a class="mm" href="magnitudoAlta.html">Magnitudo massima</a></p></div>
+    <div class="menu5"><p><a class="mm" href="localitaNumero.html">Numerosit&agrave per localit&agrave</a></p></div>
+
+    <div class = "theMain">
+
+<h2>Mappa degli epicentri dei terremoti</h2>
+
+<fieldset>
+    <legend>ScatterGeoPlot degli epicentri</legend>
+
+    <div id="scelta1">
+    <form name="f1">
+
+            <p><b>Scegli intervallo temporale</b></p>
+        da: <input type = "number" name= "annomin" value="1980" min="1950" max="2014">
+        a: <input type = "number" name= "annomax" value="2014" min="1950" max="2014">
+            <p><b>Magnitudo maggiore di:</b>
+          <select name= "magn">
+              <option value = "3" >3</option>
+              <option value = "4" >4</option>
+              <option value = "5" >5</option>
+              <option value = "6" >6</option></select></p>
+        <input type="button" value = "Filtra" onclick="grafico1b(f1.annomin.value, f1.annomax.value, f1.magn.value)">
+    </form>
+    </div>
+    <br>
+    <div id="mappa"><script>window.onload = function () {
+        grafico1b(1980,2014,3);}</script></div>
+
+
+<div class="text">
+        <h3>Analisi del grafico</h3>
+    <p>Attraverso lo <b>ScatterGeoPlot</b> su mappa interattiva &egrave possibile consultare gli eventi sismici che hanno coinvolto il territorio italiano e confinante a partire dall'anno 1950 fino all'anno 2014.
+        E' possibile selezionare dal menu un range di anni, visualizzare tutti i terremoti avvenuti in quell'arco temporale e filtrarli per magnitudo (verranno visualizzati gli eventi con intesità maggiore o uguale di quella selezionata).</p>
+    <p>Ogni marker corrisponde ad un singolo terremoto avvenuto durante il periodo scelto dall'utente ed &egrave posizionato esattamente nel punto di epicentro dell'evento (identificato dalle coordinate di latitudine e longitudine, disponibili nel dataset). Inoltre, &egrave possibile zoommare sulla mappa in modo da distinguere meglio i diversi eventi.</p>
+    <p>Ogni scossa ha una determinata <b>intensit&agrave</b>, rappresentata in scala cromatica dal grigio al rosso scuro,un marker di colore  tendente al grigio scuro corrisponde ad un terremoto di magnitudo pi&ugrave bassa mentre un market di colore tendente al rosso scuro rappresenta un terremoto di magnitudo pi&ugrave alta.
+            Sovrapponendo il puntatore ad un <b>marker</b> &egrave possibile visualizzare per quell'evento:
+    <ul>
+        <li>Coordinate geografiche dell'epicentro (latitudine e longitudine)</li>
+        <li>Magnitudo</li>
+        <li>Nome della localit&agrave</li>
+        <li>Data dell'evento nel formato AAAA-MM-GG</li>
+    </ul>
+        </p>
+
+    <h3>Considerazioni</h3>
+        <p>Per garantire una miglior visualizzazione degli eventi più significativi, &egrave stato scelto di considerare soltanto eventi con magnitudo maggiore o uguale a 3. 
+		Inoltre, &egrave da precisare che, nonostante l'epicentro di alcuni eventi sismici non si trovi in territorio italiano, questi vanno comunque considerati perch&egrave percepiti e/o aventi effetti anche in Italia.</p>
+
+        <p>Scegliendo un range abbastanza ampio di anni, la mappa ci permette di apprezzare:<ul>
+        <li>quali sono le aree geografiche italiane maggiormente colpite da terremoti o meno</li>
+        <li>quando e in quali aree si sono verificati gli eventi aventi magnitudo pi&ugrave alta</li>
+		<li>densità di eventi sismici per magnitudo</li>
+    </ul>
+        </p>
+        <p>Visualizzando la densit&agrave di marker sulla mappa in una determinata località, risulta evidente (considerando un range abbastanza ampio di anni) che esistono sicuramente aree maggiormente interessate da scosse sismiche rispetto ad altre:<ul>
+        <li>la zona tirrenica meridionale</li>
+        <li>tutto l'arco Appenninico (meridionale, centrale e settentrionale)</li>
+    </ul>
+        </p>
+
+       <p>Altre aree invece, sicuramente per motivi geologici, non sono quasi mai interessate da eventi sismici, come ad esempio:<ul>
+        <li>regione pugliese</li>
+        <li>regione sarda</li>
+    </ul>
+        <p>Un'altra considerazione da fare riguarda il numero di terremoti che &egrave possibile visualizzare filtrando per magnitudo. E' evidente che, all'aumentare della magnitudo minima selezionata,
+            sia possibile visualizzare sempre meno eventi. Per esempio, scegliendo l'arco temporale 1980-2011 con magnitudo minima uguale a 6 si visualizzano soltanto tre eventi
+            (ovviamente tra i pi&ugrave violenti della storia recente).</p>
+
+       </p>
+
+
+</div>
+</fieldset>
+
+    </div>
+    <div class="theFooter"><p>Autori:</p><p>Giulia Tortoioli, Alessio Botrugno, Giovanni Cioffi</p></div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+body { color: black; line-height: 1.1;
+    font-size: 100%; font-family: "Lucida Sans", sans-serif; }
+
+
+div {
+    display: inline-block;
+}
+
+li {
+    margin-bottom: 0.2em;
+}
+
+fieldset {
+    margin-bottom: 1em;
+}
+fieldset p  {
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+.theMain p {
+    padding-left: 2em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+h1{
+    padding-bottom: 4px;
+    font-size: 220%;
+    text-align: center;
+    background-color: rgba(255, 233, 40, 0.6);
+}
+h2 {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-top: lightsalmon 6px solid;
+    border-bottom: lightsalmon 6px solid;
+    font-size: 180%;
+}
+
+
+fieldset{
+    background-color: lightgoldenrodyellow;
+    border-color: brown;
+}
+form{
+    font-family: Verdana;
+    font-size: 80%;
+}
+legend{
+    color: brown ;
+    font-size: 120%;
+    font-family: Verdana;
+}
+
+.theMain{grid-area : main}
+.menu{grid-area: menu}
+.theFooter { grid-area: footer;
+    text-align: left;
+    margin-top: 0.3em;
+    line-height: 0.2em;
+    border-top: lightsalmon 6px solid;
+}
+
+[class*="menu"] { text-align: center;
+    font-size: 120%;
+    border: 2px solid brown;
+    background-color: moccasin;
+}
+
+.mm{
+    color: black;
+}
+a.mm:link{
+    text-decoration: none;
+}
+a.mm:hover{
+    color: red;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+            'menu1 menu2 menu3 menu4 menu5'
+            'main main main main main'
+            'footer footer footer footer footer';
+    padding: 1em;
+}
+
+
+form{
+    padding: 2em 2em;
+}
+
+#numperluogo,#numerosita,#magalta{
+    padding-right : 2em;
+    margin-left: 4em;
+}
+#mappa{
+    float: right;
+    margin-right: 4em;
+
+}
+
+#scelta1 {
+    border: 1px solid black;
+    margin-left: 6em;
+    margin-top: 10em;
+    float: left;
+}
+
+#scelta2, #scelta3 {
+    border: 1px solid black;
+    float: left;
+    margin-left: 4em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#numperluogo{
+    padding-top: 1em;
+}
+
+#benv{
+    font-size: 120%;
+}
+
+.intro{
+    text-align: center;
+}
+.text{
+    padding: 2em 2em;
+}
+.section {
+    margin-left: 6em;
+    margin-right: 6em;
+    text-align: left;
+}
+
+ul {
+    margin-left: 2em;
+}
+

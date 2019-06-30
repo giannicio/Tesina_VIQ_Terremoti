@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numerosit&agrave per luogo</title>
+    <script src="https://oop.polito.it/js/plotly-latest.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="plot.js"></script>
+</head>
+<body>
+
+<h1>ItalEarthQuakes</h1>
+<div class="grid-container">
+
+    <div class="menu1"><p><a class="mm" href="index.html">Home Page</a></p></div>
+    <div class="menu2"><p><a class="mm" href="mappa.html">Mappa degli epicentri</a></p></div>
+    <div class="menu3"><p><a class="mm" href="numerosita.html">Numerosit&agrave per anno</a></p></div>
+    <div class="menu4"><p><a class="mm" href="magnitudoAlta.html">Magnitudo massima</a></p></div>
+    <div class="menu5"><p><a class="mm" href="localitaNumero.html">Numerosit&agrave per localit&agrave</a></p></div>
+
+    <div class = "theMain">
+<h2>Numerosit&agrave eventi sismici per localit&agrave</h2>
+<fieldset>
+    <legend>Numero eventi sismici per localit&agrave</legend>
+
+    <div id = "numperluogo"><script>window.onload = function () {
+        grafico4();}</script></div>
+
+    <div class ="text">
+        <h3>Analisi del grafico</h3>
+        <p>Il grafico a barre orizzontali mostra la frequenza di eventi per localit&agrave epicentrale, cio&egrave quante volte c'&egrave stato un evento sismico in una determinata localit&agrave nel periodo 1950-2014.</p>
+        <p>Sulle ascisse troviamo alcuni valori di numerosit&agrave, a step di 50, sulle ordinate invece sono mostrate le localit&agrave.</p>
+        <p>Le barre sono ordinate in ordine decrescente a partire dall'alto. Selezionando il puntatore su ciascuna barra &egrave possibile visualizzare quanti eventi sismici
+        sono stati registrati in quella localit&agrave.</p>
+        <h3>Considerazioni</h3>
+        <p>A conferma delle considerazioni fatte nello <a href="mappa.html">ScatterGeoPlot</a> su mappa, partendo dall'alto, risulta perfettamente evidente che la regione
+            italiana pi&ugrave frequentemente colpita da eventi sismici nell'intero arco temporale 1950-2014 &egrave quella Tirrenica Meridionale, con ben 161 scosse. </p>
+        <p>Si pu&ograve notare un forte distacco tra la regione prima per numero di terremoti e tutte le altre, infatti, a partire dalla seconda posizione osserviamo due blocchi con numerosit&agrave piuttosto simili tra loro,
+        il primo comprende localit&agrave con numerosit&agrave tra 44 (Friuli) e 58 (Appennino Umbro-Marchigiano), il secondo da 27 (Ionio settentrionale) in gi&ugrave. Per chiarezza, si noti che
+        nel grafico vengono mostrate soltanto le localit&agrave con numerosit&agrave maggiore di 20.</p>
+    </div>
+
+</fieldset>
+
+    </div>
+    <div class="theFooter"><p>Autori:</p><p>Giulia Tortoioli, Alessio Botrugno, Giovanni Cioffi</p></div>
+</div>
+
+</body>
+</html>

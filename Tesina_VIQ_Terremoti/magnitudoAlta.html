@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magnitudo alta</title>
+    <script src="https://oop.polito.it/js/plotly-latest.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="plot.js"></script>
+</head>
+<body>
+
+<h1>ItalEarthQuakes</h1>
+
+<div class="grid-container">
+
+    <div class="menu1"><p><a class="mm" href="index.html">Home Page</a></p></div>
+    <div class="menu2"><p><a class="mm" href="mappa.html">Mappa degli epicentri</a></p></div>
+    <div class="menu3"><p><a class="mm" href="numerosita.html">Numerosit&agrave per anno</a></p></div>
+    <div class="menu4"><p><a class="mm" href="magnitudoAlta.html">Magnitudo massima</a></p></div>
+    <div class="menu5"><p><a class="mm" href="localitaNumero.html">Numerosit&agrave per localit&agrave</a></p></div>
+
+    <div class = "theMain">
+
+<h2>Eventi sismici con magnitudo pi&ugrave alta per anno</h2>
+<fieldset>
+    <legend>Magnitudo massima per anno</legend>
+    <div id="scelta3">
+    <form name="f3">
+        <p><b>Inserisci intervallo temporale:</b></p>
+        Da: <input type = "number" name= "annomin" min="1950" max="2014" value = "1980">
+        a: <input type = "number" name= "annomax"  min="1950" max="2014" value = "2014">
+        <input type="button" value="Visualizza" onclick="grafico3(f3.annomin.value, f3.annomax.value)">
+    </form>
+        </div>
+    <div id = "magalta"><script>window.onload = function () {
+        grafico3(1980,2014);}</script></div>
+
+    <div class="text">
+        <h3>Analisi del grafico</h3>
+        <p>Lo scatter plot mostra quali sono stati gli eventi di maggiore intensit&agrave, ossia con la <b>magnitudo pi&ugrave alta</b> in ogni anno, considerando gli anni del periodo scelto dall'utente.
+            Posizionando il puntatore su ciascun punto, corrispondente ad un singolo terremoto, &egrave possibile visualizzare la magnitudo e la localit&agrave.</p>
+
+        <h3>Considerazioni</h3>
+        <p>Tra gli eventi sismici registrati con magnitudo pi&ugrave alta avvenuti in Italia troviamo, ad esempio:<ul>
+        <li>terremoto della Valle del Belice del 1968 (6.41)</li>
+        <li>terremoto del Friuli del 1976 (magnitudo 6.45)</li>
+        <li>terremoto dell'Irpinia del 1980 (magnitudo 6.81)</li>
+        <li>terremoto dell'Aquila del 2009 (magnitudo 6.29)</li>
+    </ul>
+        </p>
+        <p>Si noti che la magnitudo pi&ugrave alta per anno
+            non scende mai al di sotto del valore 4.5 (come si può apprezzare dal fatto che non si visualizzano punti al di sotto della retta y=4.5). Inoltre, il fatto che lo zero del grafico corrisponda al valore di magnitudo 4 &egrave dovuto soltanto
+            al fatto che non esistono, tra i terremoti più intensi per anno, eventi con magnitudo compresa tra 0 e 4.5 quindi non ha senso considerare tale range. </p>
+    </div>
+
+</fieldset>
+
+</div>
+    <div class="theFooter"><p>Autori:</p><p>Giulia Tortoioli, Alessio Botrugno, Giovanni Cioffi</p></div>
+</div>
+</body>
+</html>

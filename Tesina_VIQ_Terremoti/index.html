@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Terremoti</title>
+    <script src="https://oop.polito.it/js/plotly-latest.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="plot.js"></script>
+</head>
+
+<body>
+<h1>ItalEarthQuakes</h1>
+
+<div class="grid-container">
+
+    <div class="menu1"><p><a class="mm" href="index.html">Home Page</a></p></div>
+    <div class="menu2"><p><a class="mm" href="mappa.html">Mappa degli epicentri</a></p></div>
+    <div class="menu3"><p><a class="mm" href="numerosita.html">Numerosit&agrave per anno</a></p></div>
+    <div class="menu4"><p><a class="mm" href="magnitudoAlta.html">Magnitudo massima</a></p></div>
+    <div class="menu5"><p><a class="mm" href="localitaNumero.html">Numerosit&agrave per localit&agrave</a></p></div>
+
+<div class = "theMain">
+<div class = "intro">
+    <h2>Introduzione</h2>
+
+    <h3 id="benv">Benvenuto in ItalEarthQuakes,</h3>
+    <p>Il sito web che ti offre informazioni sui terremoti avvenuti in Italia dal 1950 al 2014.</p>
+
+    <div class="section">
+    <h3><u>GLI OBIETTIVI</u></h3>
+    <ul>
+    <li>Visualizzare quali sono le localit&agrave pi&ugrave frequentemente colpite dai terremoti in Italia e nei territori circostanti.</li>
+    <li>Comprendere se esiste un qualsiasi andamento o tendenza del numero di eventi sismici nel corso degli anni.</li>
+    <li>Visualizzare informazioni sui terremoti con magnitudo pi&ugrave alta in Italia e nei territori confinanti.</li>
+    </ul>
+
+    <h3><u>IL DATASET</u></h3>
+        <p>Il dataset utilizzato contiene informazioni su pi&ugrave di 4500 terremoti avvenuti in Italia e nelle aree circostanti a partire dall'anno 1005 d.C. fino al 2014.</p>
+        <p>I dati, pubblicati online nel 2016 dall'Istituto Nazionale di Geofisica e Vulcanologia italiano (INVG) e disponibili al seguente link  <a href="terremoti.csv">INVG_dataset</a>,
+            sono stati resi disponibili dal Catalogo Parametrico dei Terremoti Italiani (CPTI15). Il dataset, in formato csv, cataloga una grande quantit&agrave di eventi fornendo
+            <b>data</b>, <b>localit&agrave</b>, <b>latitudine</b> e <b>longitudine</b> dell'epicentro e permette di confrontarli attraverso la <b>magnitudo</b> (il livello di energia liberata secondo la <a href="https://it.wikipedia.org/wiki/Scala_Richter">scala Richter</a>) e la <b>profondit&agrave</b> dell'ipocentro.
+            Si noti che il dataset non comprende eventi sismici aventi magnitudo inferiore a 2.</p>
+
+    <p>Naturalmente la quantit&agrave dei terremoti registrati negli anni &egrave condizionata sia dalle tecnologie utilizzate per i rilevamenti sia dalla documentazione disponibile.
+    Per queste ragioni, gli ultimi 60/70 anni risultano ovviamente pi&ugrave ricchi di dati. E' per questo che &egrave stato scelto di considerare
+        esclusivamente le scosse avvenute <b>a partire dal 1950 (compreso) in poi </b>, in modo da considerare un set pi&ugrave ampio di dati maggiormente significativi.</p>
+
+        <h3><u>LINGUAGGI E LIBRERIA UTILIZZATA</u></h3>
+        <p>Il sito &egrave sviluppato in linguaggio HTML per il contenuto, CSS per lo stile e Javascript per la parte dinamica. I grafici proposti nel sito sono stati realizzati in linguaggio Javascript utilizzando la charting library <a href="https://plot.ly/">Plotly.</a></p>
+    </div>
+
+
+</div>
+</div>
+    <div class="theFooter"><p>Autori:</p><p>Giulia Tortoioli, Alessio Botrugno, Giovanni Cioffi</p></div>
+</div>
+</body>
+</html>

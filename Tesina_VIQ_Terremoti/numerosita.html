@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Numerosit&agrave per anno</title>
+    <script src="https://oop.polito.it/js/plotly-latest.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="plot.js"></script>
+</head>
+<body>
+<h1>ItalEarthQuakes</h1>
+<div class="grid-container">
+
+    <div class="menu1"><p><a class="mm" href="index.html">Home Page</a></p></div>
+    <div class="menu2"><p><a class="mm" href="mappa.html">Mappa degli epicentri</a></p></div>
+    <div class="menu3"><p><a class="mm" href="numerosita.html">Numerosit&agrave per anno</a></p></div>
+    <div class="menu4"><p><a class="mm" href="magnitudoAlta.html">Magnitudo massima</a></p></div>
+    <div class="menu5"><p><a class="mm" href="localitaNumero.html">Numerosit&agrave per localit&agrave</a></p></div>
+
+    <div class = "theMain">
+
+
+<h2>Numerosit&agrave nel corso degli anni</h2>
+<fieldset>
+    <legend>Frequenza</legend>
+    <div id="scelta2">
+    <form name="f2">
+        <p><b>Inserisci intervallo temporale:</b></p>
+        da: <input type = "number" name= "annomin" value = "1980" min="1900" max="2014">
+        a: <input type = "number" name= "annomax" value = "2014" min="1900" max="2014">
+        <input type="button" value="Visualizza" onclick="grafico2(f2.annomin.value, f2.annomax.value)">
+    </form>
+    </div>
+    <div id = "numerosita"><script>window.onload = function () {
+        grafico2(1980,2014);}</script></div>
+
+    <div class="text">
+        <h3>Analisi del grafico</h3>
+
+        <p>Scegliendo un arco temporale di anni, viene visualizzato un grafico che mostra l'<b>andamento temporale</b> della numerosit&agrave di eventi sismici avvenuti (in un certo anno) nel corso degli anni.
+            Le ascisse rappresentano gli anni del periodo selezionato, mentre le ordinate il numero di terremoti. Posizionando il puntatore sui punti del grafico, vengono mostrati
+            l'anno e il numero di terremoti in quell'anno. Il grafico mostra, inoltre, una linea orizzontale che corrisponde alla <b>media</b> di terremoti
+            avvenuti in un anno, calcolata considerando il range di anni scelto.</p>
+
+
+        <h3>Considerazioni</h3>
+
+        <p>Il grafico ci consente di rispondere alla seguente domanda: "Esiste un qualsiasi <b>andamento o tendenza</b> del numero di eventi sismici nel corso degli anni?".
+            Considerando un periodo sufficientemente ampio, ad esempio 1980-2014 e analizzando i risultati del grafico, non sembra esserci nessuna tendenza lineare.
+        </p>
+        <p>Il numero di terremoti non sembra, quindi, n&egrave aumentare, n&egrave diminuire linearmente nel corso degli anni,
+            mostrando un andamento abbastanza altalenante con dei picchi nel 1980 (77 terremoti), 1997 (94 terremoti), 2002 (79 terremoti). Gli altri valori si
+            posizionano abbastanza vicini alla media di circa 39 terremoti, con picchi negativi di 18,20,21 terremoti rispettivamente negli anni 2007, 1982, 2010.</p>
+        <p>E' da notare, invece, che se si sceglie l'arco temporale pi&ugrave ampio possibile (1950-2014), si pu&ograve notare una leggerissima tendenza di aumento degli
+            eventi registrati (a partire dall'anno 1950 in poi fino), dovuta presumibilmente al progredire delle tecnologie che hanno permesso una maggiore e migliore
+            catalogazione di eventi andando avanti negli anni. Chiaramente, scegliendo questo range, la media di terremoti risulta essere pi&ugrave bassa (circa 29) poich&egrave
+            negli anni pi&ugrave remoti non si era in grado di catalogare tanti eventi sismici e per questo la numerosit&agrave risulta ovviamente minore.</p>
+
+    </div>
+
+</fieldset>
+
+    </div>
+    <div class="theFooter"><p>Autori:</p><p>Giulia Tortoioli, Alessio Botrugno, Giovanni Cioffi</p></div>
+</div>
+</body>
+</html>
